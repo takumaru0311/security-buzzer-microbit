@@ -1,3 +1,7 @@
+music.setVolume(256)
+radio.setGroup(256)
+radio.setTransmitPower(7)
+pins.setPull(DigitalPin.P2, PinPullMode.PullUp)
 radio.onReceivedNumber(function (receivedNumber) {
     while (!(input.buttonIsPressed(Button.B))) {
         GigoFuture.digitalWrite(GigoLED.C, true)
@@ -19,10 +23,6 @@ input.onButtonPressed(Button.B, function () {
     music.stopAllSounds()
     GigoFuture.digitalWrite(GigoLED.B, false)
 })
-music.setVolume(256)
-radio.setGroup(256)
-radio.setTransmitPower(7)
-pins.setPull(DigitalPin.P2, PinPullMode.PullUp)
 basic.forever(function () {
     if (GigoFuture.analogRead(PinAnalog.P1) > 500) {
         GigoFuture.digitalWrite(GigoLED.D, true)

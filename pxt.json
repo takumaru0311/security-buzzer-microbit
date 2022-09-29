@@ -26,6 +26,6 @@
     "supportedTargets": [
         "microbit"
     ],
-    "preferredEditor": "blocksprj",
+    "preferredEditor": "tsprj",
     "GigoFuture": "未来シリーズ"
 }
